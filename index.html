@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CHISELED HEARTS | Basic Clothing</title>
+    <title>CHISELED | Basic Clothing</title>
     <style>
         /* --- CSS STYLES --- */
         :root {
@@ -30,12 +30,12 @@
             color: inherit;
         }
 
-        /* Navigation */
+        /* Navigation & Logo */
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 2rem 5%;
+            padding: 1.5rem 5%;
             background-color: var(--off-white);
             position: sticky;
             top: 0;
@@ -43,10 +43,23 @@
             border-bottom: 1px solid #eaeaea;
         }
 
-        .logo {
-            font-size: 1.5rem;
+        .logo-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+        }
+
+        .logo-text {
+            font-size: 1.3rem;
             font-weight: 700;
-            letter-spacing: 4px;
+            letter-spacing: 5px;
+            color: var(--charcoal);
         }
 
         .nav-links {
@@ -56,9 +69,9 @@
         }
 
         .nav-links a {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
             transition: color 0.3s ease;
         }
 
@@ -77,15 +90,21 @@
             padding: 0 20px;
         }
 
+        .hero-logo {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 1.5rem;
+        }
+
         .hero h1 {
-            font-size: 3rem;
+            font-size: 2.8rem;
             font-weight: 300;
             margin-bottom: 1rem;
             letter-spacing: 2px;
         }
 
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: #666;
             margin-bottom: 2.5rem;
         }
@@ -96,7 +115,7 @@
             color: var(--off-white);
             text-transform: uppercase;
             letter-spacing: 2px;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             transition: background 0.3s ease;
         }
 
@@ -111,7 +130,7 @@
 
         .section-title {
             text-align: center;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: 400;
             letter-spacing: 3px;
             margin-bottom: 3rem;
@@ -120,7 +139,7 @@
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
         }
 
@@ -148,7 +167,7 @@
         }
 
         .product-name {
-            font-size: 1rem;
+            font-size: 0.95rem;
             font-weight: 500;
             margin-bottom: 0.5rem;
         }
@@ -167,10 +186,9 @@
             letter-spacing: 1px;
         }
 
-        /* Mobile Responsive */
         @media (max-width: 768px) {
             .nav-links {
-                display: none; /* Can be toggled with JS later */
+                display: none;
             }
             .hero h1 {
                 font-size: 2rem;
@@ -181,7 +199,17 @@
 <body>
 
     <header>
-        <div class="logo">Chiseled hearts</div>
+        <div class="logo-brand">
+            <svg class="logo-icon" viewBox="0 0 100 100" fill="none" stroke="#2C3539" stroke-width="6">
+                <line x1="10" y1="10" x2="90" y2="10" />
+                <line x1="10" y1="10" x2="10" y2="90" />
+                <line x1="10" y1="90" x2="90" y2="90" />
+                <line x1="90" y1="10" x2="90" y2="40" />
+                <line x1="90" y1="60" x2="90" y2="90" />
+            </svg>
+            <span class="logo-text">CHISELED HEARTS</span>
+        </div>
+
         <ul class="nav-links">
             <li><a href="#shop">Shop</a></li>
             <li><a href="#about">About</a></li>
@@ -190,6 +218,14 @@
     </header>
 
     <section class="hero">
+        <svg class="hero-logo" viewBox="0 0 100 100" fill="none" stroke="#2C3539" stroke-width="4">
+            <line x1="10" y1="10" x2="90" y2="10" />
+            <line x1="10" y1="10" x2="10" y2="90" />
+            <line x1="10" y1="90" x2="90" y2="90" />
+            <line x1="90" y1="10" x2="90" y2="40" />
+            <line x1="90" y1="60" x2="90" y2="90" />
+        </svg>
+
         <h1>Nothing extra.</h1>
         <p>Just what matters. Premium basics for an uncomplicated life.</p>
         <a href="#shop" class="btn">Shop The Collection</a>
@@ -199,17 +235,17 @@
         <h2 class="section-title">Core Collection</h2>
         <div class="grid">
             <div class="product-card">
-                <div class="product-image">[ Product Image Here ]</div>
+                <div class="product-image">[ Product Image ]</div>
                 <h3 class="product-name">The Heavyweight Tee</h3>
                 <p class="product-price">$35.00</p>
             </div>
             <div class="product-card">
-                <div class="product-image">[ Product Image Here ]</div>
+                <div class="product-image">[ Product Image ]</div>
                 <h3 class="product-name">The Everyday Hoodie</h3>
                 <p class="product-price">$65.00</p>
             </div>
             <div class="product-card">
-                <div class="product-image">[ Product Image Here ]</div>
+                <div class="product-image">[ Product Image ]</div>
                 <h3 class="product-name">The Essential Trouser</h3>
                 <p class="product-price">$80.00</p>
             </div>
@@ -217,11 +253,10 @@
     </section>
 
     <footer>
-        <p>&copy; <span id="year"></span> Chiseled hearts. All rights reserved.</p>
+        <p>&copy; <span id="year"></span> CHISELED HEARTS. All rights reserved.</p>
     </footer>
 
     <script>
-        // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -231,7 +266,6 @@
             });
         });
 
-        // Automatically update footer year
         document.getElementById('year').textContent = new Date().getFullYear();
     </script>
 
